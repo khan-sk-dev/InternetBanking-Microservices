@@ -1,132 +1,136 @@
-[![CI For Concept Microservice](https://github.com/JavatoDev-com/internet-banking-concept-microservices/actions/workflows/gradle.yml/badge.svg)](https://github.com/JavatoDev-com/internet-banking-concept-microservices/actions/workflows/gradle.yml)
+<div align="center">
+  <h1>🏦 InternetBanking-Microservices</h1>
+  <p>Enterprise-Grade Banking Solution Built with Spring Boot Microservices</p>
 
-# Internet Banking Concept With Java Spring Boot Microservices
+  [![CI Status](https://github.com/khan-sk-dev/InternetBanking-Microservices/actions/workflows/gradle.yml/badge.svg)](https://github.com/khan-sk-dev/InternetBanking-Microservices/actions/workflows/gradle.yml)
+  [![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.4-brightgreen.svg)](https://spring.io/projects/spring-boot)
+  [![Java](https://img.shields.io/badge/Java-21-orange.svg)](https://adoptium.net/)
+  [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+</div>
 
-This source code was developed for Java based microservices tutorial series from [javatodev.com](https://javatodev.com).
+## 🌟 Features & Highlights
 
-In this article series I’m going to explain using internet banking API concept with spring boot based microserices architecture. Initially I’ll develop the core API which will evolve as a full fledged REST API collection until deployments.
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">🔐<br><b>Secure Authentication</b></td>
+      <td align="center">💸<br><b>Fund Transfers</b></td>
+      <td align="center">💳<br><b>Bill Payments</b></td>
+      <td align="center">📊<br><b>Transaction History</b></td>
+    </tr>
+    <tr>
+      <td align="center">🔄<br><b>Real-time Updates</b></td>
+      <td align="center">📱<br><b>Mobile Ready</b></td>
+      <td align="center">🛡️<br><b>Fraud Detection</b></td>
+      <td align="center">📈<br><b>Analytics</b></td>
+    </tr>
+  </table>
+</div>
 
-### Releases
+## 🏗️ Architecture Overview
 
-- [1.0.0](https://github.com/JavatoDev-com/internet-banking-concept-microservices/releases/tag/v.1.0.0) - Initial release with Java 11 and Spring Boot 2.
-- [2.0.0](https://github.com/JavatoDev-com/internet-banking-concept-microservices/releases/tag/v.1.0.0) - Updated version with Java 21, Spring Boot 3.2.4 , Spring Cloud 2023.0.0
+<div align="center">
+  <img src="https://javatodev.com/content/images/wordpress/2021/05/Microservices-Article-Banking-Core-Concept-1024x870.png" alt="Architecture Diagram" width="800"/>
+</div>
 
-### Installation
+## 🛠️ Tech Stack & Tools
 
-1. Clone the repository:
+<div align="center">
 
-```shell
-$ git clone https://github.com/JavatoDev-com/internet-banking-concept-microservices.git
+### Core Technologies
+<p>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40"/>
+  <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="spring" width="40"/>
+  <img src="https://www.vectorlogo.zone/logos/gradle/gradle-plain.svg" alt="gradle" width="40"/>
+</p>
+
+### Data & Messaging
+<p>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg" alt="postgresql" width="40"/>
+  <img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="rabbitmq" width="40"/>
+  <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="kafka" width="40"/>
+</p>
+
+### DevOps & Monitoring
+<p>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg" alt="docker" width="40"/>
+  <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes" width="40"/>
+  <img src="https://www.vectorlogo.zone/logos/jenkins/jenkins-icon.svg" alt="jenkins" width="40"/>
+  <img src="https://www.vectorlogo.zone/logos/prometheusio/prometheusio-icon.svg" alt="prometheus" width="40"/>
+  <img src="https://www.vectorlogo.zone/logos/grafana/grafana-icon.svg" alt="grafana" width="40"/>
+</p>
+
+### CI/CD & Version Control
+<p>
+  <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="40"/>
+  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt="github" width="40"/>
+  <img src="https://www.vectorlogo.zone/logos/circleci/circleci-icon.svg" alt="circleci" width="40"/>
+</p>
+</div>
+
+## 🚀 Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/khan-sk-dev/InternetBanking-Microservices.git
+
+# Navigate to project
+cd InternetBanking-Microservices
+
+# Start services
+docker-compose up -d
 ```
 
-2. Navigate to the docker-compose folder:
+## 🔌 Services & Ports
 
-```shell
-$ cd internet-banking-concept-microservices/docker-compose
-```
-3. Start application using docker-compose:
+| Service | Port | Health Check |
+|---------|------|-------------|
+| Config Server | `8090` | [🔗](http://localhost:8090/health) |
+| Service Registry | `8081` | [🔗](http://localhost:8081) |
+| API Gateway | `8082` | [🔗](http://localhost:8082/health) |
+| User Service | `8083` | [🔗](http://localhost:8083/health) |
+| Fund Transfer | `8084` | [🔗](http://localhost:8084/health) |
+| Core Banking | `8092` | [🔗](http://localhost:8092/health) |
 
-```shell
-$ docker-compose up -d
-```
+## 🧪 Testing
 
-#### Docker Containers
-
-Container | IP | Port Mapping |
---- | --- | --- |
-openzipkin_server | 172.25.0.12 | 9411
-keycloak_web | 172.25.0.11 | 8080
-keycloak_postgre_db | 172.25.0.10 | 5432(Closed Port)
-mysql_javatodev_app | 172.25.0.9 | 3306
-internet-banking-config-server | 172.25.0.8 | 8090
-internet-banking-service-registry | 172.25.0.7 | 8081
-internet-banking-api-gateway | 172.25.0.6 | 8082
-internet-banking-user-service | 172.25.0.5 | 8083
-internet-banking-fund-transfer-service | 172.25.0.4 | 8084
-internet-banking-utility-payment-service | 172.25.0.3 | 8085
-core-banking-service | 172.25.0.2 | 8092
-
-### Postman Collection
-
-Whole suite related postman collection can be sync using this URL. 
-
-[Postman Collection](https://www.postman.com/javatodev-api/workspace/javatodev-api-collections/folder/24962357-0fecb63e-fa48-4a0d-91ba-6b7fdc5ddebd?action=share&source=copy-link&creator=24962357&ctx=documentation)
-
-Clone this postman collection and switch to the `LOCAL_DOCKER_SETUP` Environment.
-
-#### Test Data
-
-By default we have dummy accounts details with user details under core-banking-database. Also the keycloak instance will deployed with default dataset matched to the application with all the realm, client and user data sets.
-
-Proceed the testings with `AUTHENTICATION` API request under BANKING_CORE_MICROSERVICES COLLECTION.
-
-```
-Test Credentials : ib_admin@javatodev.com / 5V7huE3G86uB
+### Default Test Credentials
+```json
+{
+  "email": "ib_admin@javatodev.com",
+  "password": "5V7huE3G86uB"
+}
 ```
 
-### Contribution
+### API Documentation
+[![Postman](https://img.shields.io/badge/Postman-Collection-orange?logo=postman)](https://www.postman.com/javatodev-api/workspace/javatodev-api-collections)
 
-### Microservices Inside This Project
+## 📈 Performance Monitoring
 
-Here this project consist of mainly 6 microservices and those are,
+Access monitoring dashboards:
+- Prometheus: `http://localhost:9090`
+- Grafana: `http://localhost:3000`
+- Zipkin: `http://localhost:9411`
 
-- User service (banking-core-user-service) – This service includes all the operations under the User such as registrations and retrieval. Additionally, this API consumes keycloak REST API to register and manage the user base while using the local PostgreSQL database as well.
-- Fund transfer service (banking-core-fund-transfer-service) – This is the service that handles all the fund transfers between accounts and this API will push messages to a centralized RabbitMQ queue to use from the Notification service.
-- Payment service (banking-core-payments-service) – This service will include all the API endpoints to process Utility payments in this project and that will push notification messages to RabbitMQ as well.
-- Notification service – This API is registered under the service registry but consumes all the messages from RabbitMQ and pushes necessary notifications to the end users. - PENDING Development
-- Banking core service – This is the banking core service that acts as a dummy banking core with accounts, users, transaction details, and processors for banking transactions.
+## 🤝 Contributing
 
-### Base Project Architecture
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-<a href="#" target="blank">
-    <img align="center" src="https://javatodev.com/content/images/wordpress/2021/05/Microservices-Article-Banking-Core-Concept-1024x870.png" 
-alt="Spring Boot Microservices Project Architecture By Javatodev.com"/></a>
 
-### Technology Stack
+## 👥 Contributors
 
-1. Java 21
-2. Spring Boot 3.2.4
-3. Spring Cloud 2023.0.0 
-4. Netflix Eureka Service Registry
-5. Netflix Eureka Service Client
-6. Spring Cloud API Gateway
-7. Spring Cloud Config Server
-8. Zipkin
-9. Spring Cloud Sleuth
-10. Open Feign
-11. RabbitMQ
-12. Prometheus 
-13. MySQL 
-14. Keycloak 
-15. Docker / Docker Compose 
-16. Kubernetes 
-17. Keycloak
+<a href="https://github.com/khan-sk-dev/InternetBanking-Microservices/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=khan-sk-dev/InternetBanking-Microservices" />
+</a>
 
-Article series 
+---
 
-[1. Building Microservices With Spring Boot – Free Course With Practical Project](https://javatodev.com/building-microservices-with-spring-boot-free-course-with-practical-project/)
-
-[2. Microservices – Service Registration and Discovery With Spring Cloud Netflix Eureka](https://javatodev.com/microservices-service-registration-and-discovery-with-spring-cloud-netflix-eureka/)
-
-[3. Microservices – Setup API Gateway Using Spring Cloud Gateway](https://javatodev.com/microservices-setup-api-gateway-using-spring-cloud-gateway/)
-
-[4. Microservices – Authentication, and Authorization With Keycloak](https://javatodev.com/microservices-authentication-and-authorization-with-keycloak/)
-
-[5. Microservices – Core Banking Service Implementation](https://javatodev.com/microservices-core-banking-service-implementation/)
-
-[6. Microservices – User Service Implementation](https://javatodev.com/microservices-user-service-implementation/)
-
-[7. Microservices – Fund Transfer Service Implementation](https://javatodev.com/microservices-fund-transfer-service-implementation/)
-
-[8. Microservices – Utility Payment Service Implementation](https://javatodev.com/microservices-utility-payment-service-implementation/)
-
-[9. Microservices – Communication With Spring Cloud OpenFeign](https://javatodev.com/microservices-communication-with-spring-cloud-openfeign/)
-
-[10. Microservices – Exception Handling](https://javatodev.com/microservices-exception-handling/)
-
-[11. Microservices – Centralized Configurations With Spring Cloud Config](https://javatodev.com/microservices-centralized-configurations-with-spring-cloud-config/)
-
-#### Author
-
-<h1 align="center">Hi 👋, I'm Chinthaka Dinadasa</h1>
-<h3 align="center">A Passionate Java Fullstack Developer from Sri Lanka and Author of JavatoDev.com</h3>
+<div align="center">
+  <p>⭐ Star us on GitHub — it motivates us a lot!</p>
+  <p>Made with ❤️ by developers for developers</p>
+</div>
